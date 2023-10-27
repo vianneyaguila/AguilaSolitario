@@ -1,10 +1,5 @@
-br: compilar ejecutar
+bin/Main: src/Main.cpp include/*
+	c++ src/Main.cpp -o bin/Main -lcurses -I include 
 
-compilar: src/main.cpp
-g++ src/main.cpp -o din/mascotas -I include
-
-ejecutar: bin/mascotas
-./bin/mascotas
-
-clean: bin/mascotas
-rm bin/mascotas  //se borra el archivo de mascotas
+run : bin/Main
+	./bin/Main

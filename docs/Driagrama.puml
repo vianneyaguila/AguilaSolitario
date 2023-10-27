@@ -1,0 +1,14 @@
+@startuml Solitario
+
+class Carta
+class Dibujo
+class Actualizable
+class Ventana
+class cartaast
+
+Carta --|> Dibujo
+Carta  --o Actualizable
+Ventana --o Actualizable
+Ventana --o Dibujo
+Carta --|> cartaast
+cartaast --|> Dibujo  
